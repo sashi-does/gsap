@@ -6,9 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-
-
-
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   const contactContainer = {
@@ -16,7 +13,7 @@ export default function Navbar() {
     visible: {
       transition: {
         staggerChildren: 0.2,
-        ease: "easeOut", 
+        ease: "easeOut",
       },
     },
   };
@@ -35,33 +32,31 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="animate-slideDown fixed top-0 right-0 z-50 p-6 flex items-center space-x-4 pointer-events-none ">
-  <button
-    onClick={toggleMenu}
-    className="flex cursor-pointer items-center space-x-3 group mix-blend-difference pointer-events-auto"
-  >
-    <span className="tracking-widest text-sm text-white">CONTACT</span>
-    <div className="relative w-6 h-4">
-      <motion.span
-        animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-        className="absolute w-full h-[2px] bg-white left-0 top-0 origin-center"
-        transition={{ duration: 0.3, ease: 'easeOut' }}
-      />
-      <motion.span
-        animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-        className="absolute w-full h-[2px] bg-white left-0 top-1/2 transform -translate-y-1/2"
-        transition={{ duration: 0.2, ease: 'easeOut' }}
-      />
-      <motion.span
-        animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-        className="absolute w-full h-[2px] bg-white left-0 bottom-0 origin-center"
-        transition={{ duration: 0.3, ease: 'easeOut' }}
-      />
-    </div>
-  </button>
-</nav>
-
-
+      <nav className="animate-slideDown z-100 fixed top-0 right-0 z-50 p-6 flex items-center space-x-4 pointer-events-none ">
+        <button
+          onClick={toggleMenu}
+          className="flex cursor-pointer items-center space-x-3 group mix-blend-difference pointer-events-auto"
+        >
+          <span className="tracking-widest text-sm text-white">CONTACT</span>
+          <div className="relative w-6 h-4">
+            <motion.span
+              animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+              className="absolute w-full h-[2px] bg-white left-0 top-0 origin-center"
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            />
+            <motion.span
+              animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+              className="absolute w-full h-[2px] bg-white left-0 top-1/2 transform -translate-y-1/2"
+              transition={{ duration: 0.2, ease: "easeOut" }}
+            />
+            <motion.span
+              animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+              className="absolute w-full h-[2px] bg-white left-0 bottom-0 origin-center"
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            />
+          </div>
+        </button>
+      </nav>
 
       <AnimatePresence>
         {isOpen && (
@@ -70,7 +65,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#000] text-white z-40 flex flex-col justify-center items-center px-6"
+            className="fixed inset-0 h-screen bg-[#000] text-white z-40 flex flex-col justify-center items-center px-6"
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <motion.div
