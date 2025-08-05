@@ -26,7 +26,7 @@ const Section = () => {
     >
       <img
         src="/images/warner.png"
-        className="image absolute top-0 left-0 h-screen w-full object-cover z-10"
+        className="image absolute top-0 left-0 w-full mx-auto h-full object-cover z-10"
         style={{ transform: "scale(1)" }}
       />
 
