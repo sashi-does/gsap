@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="animate-slideDown z-100 fixed top-0 right-0 z-50 p-6 flex items-center space-x-4 pointer-events-none ">
+      <nav className="animate-slideDown fixed top-0 right-0 z-50 p-6 flex items-center space-x-4 pointer-events-none ">
         <button
           onClick={toggleMenu}
           className="flex cursor-pointer items-center space-x-3 group mix-blend-difference pointer-events-auto"

@@ -1,4 +1,3 @@
-// SmoothScrollWrapper.tsx
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -13,7 +12,6 @@ const SmoothScrollWrapper = ({ children }: { children: React.ReactNode }) => {
   const [showNavbar, setShowNavbar] = useState(false)
 
   useEffect(() => {
-    // Show navbar after 5 seconds (manual timing)
     const timeout = setTimeout(() => {
       setShowNavbar(true)
     }, 5000)

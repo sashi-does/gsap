@@ -19,7 +19,6 @@ const BrandSection = () => {
       pin: true,
     });
 
-    // Move from left (off-screen) to center
     gsap.fromTo(
       ".row-left",
       { x: "-165vw" },
@@ -34,7 +33,6 @@ const BrandSection = () => {
       }
     );
 
-    // Move from right (off-screen) to center
     gsap.fromTo(
       ".row-right",
       { x: "100vw" },
