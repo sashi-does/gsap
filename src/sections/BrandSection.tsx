@@ -5,62 +5,97 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const brands = [
-  "Nike", "Apple", "Google", "Netflix", "Adobe", "CocaCola", "Samsung", "Intel",
-  "Spotify", "Amazon", "Microsoft", "Pepsi", "Sony", "Tesla", "Meta",
+  "apple.png",
+  "att.png",
+  "aws.png",
+  "cannes-lions.png",
+  "cnn.png",
+  "coca-cola.png",
+  "hbo.png",
+  "live-nation.png",
+  "madiso-square-garden.png",
+  "mgm.png",
+  "robin-hood.png",
+  "shakira.png",
+  "sxsw.png",
+  "wb.png",
+  "world-economic-forum.png",
+  "youtube.png",
 ];
+
+const brandss = [
+  
+  "cadillac.png",
+  "carnegie-hall.png",
+  "dior.png",
+  "edc.png",
+  "electric-forest.png",
+  "google.png",
+  "netflix.png",
+  "nfl.png",
+  "nike.png",
+  "radio-city.png",
+  "redbull.png",
+  "royal-caribbean.png",
+  "salesforce.png",
+  "samsung.png",
+  "turner.png",
+];
+
 
 const BrandSection = () => {
   useGSAP(() => {
     ScrollTrigger.create({
       trigger: "#brandSection",
       start: "top top",
-      end: "+=4000",
+      end: "+=8000", // longer scroll = smoother
       scrub: true,
       pin: true,
     });
-
-    gsap.fromTo(
-      ".row-left",
-      { x: "-165vw" },
-      {
-        x: "182vw",
-        scrollTrigger: {
-          trigger: "#brandSection",
-          start: "top top",
-          end: "+=4000",
-          scrub: true,
-        },
-      }
-    );
-
+  
     gsap.fromTo(
       ".row-right",
-      { x: "100vw" },
+      { x: "-100vw" }, // reduce distance
       {
-        x: "-247vw",
+        x: "100vw",
         scrollTrigger: {
           trigger: "#brandSection",
           start: "top top",
-          end: "+=4000",
+          end: "+=8000",
           scrub: true,
         },
       }
     );
-
+  
+    gsap.fromTo(
+      ".row-left",
+      { x: "100vw" },
+      {
+        x: "-100vw",
+        scrollTrigger: {
+          trigger: "#brandSection",
+          start: "top top",
+          end: "+=8000",
+          scrub: true,
+        },
+      }
+    );
+  
     gsap.fromTo(
       [".row-left", ".row-right"],
       { scale: 1 },
       {
-        scale: 2,
+        scale: 1.5,
         scrollTrigger: {
           trigger: "#brandSection",
           start: "top top",
-          end: "+=4000",
+          end: "+=8000",
           scrub: true,
         },
       }
     );
   }, []);
+  
 
   return (
     <div
@@ -71,7 +106,13 @@ const BrandSection = () => {
       <div className="flex overflow-hidden mb-10">
         <div className="row-left my-5 flex space-x-16 text-[40px] font-bold uppercase origin-center">
           {brands.map((brand, i) => (
-            <span key={`left-${i}`}>{brand}</span>
+            <img
+            key={`left-${i}`}
+            src={`/images/brands/${brand}`}
+            alt={brand.replace(".png", "")}
+            className="h-13 w-auto object-contain"
+          />
+          
           ))}
         </div>
       </div>
@@ -79,8 +120,13 @@ const BrandSection = () => {
       {/* Row 2 - Scroll right to center */}
       <div className="flex overflow-hidden">
         <div className="row-right mb-5 flex space-x-16 text-[40px] font-bold uppercase origin-center">
-          {brands.map((brand, i) => (
-            <span key={`right-${i}`}>{brand}</span>
+        {brandss.map((brand, i) => (
+            <img
+            key={`left-${i}`}
+            src={`/images/brandss/${brand}`}
+            alt={brand.replace(".png", "")}
+            className="h-13 w-auto object-contain"
+          />
           ))}
         </div>
       </div>

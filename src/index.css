@@ -1,10 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 
 @font-face {
   font-family: "ProximaNova, sans-serif";
-  src: url("/fonts/ProximaNova-Regular.otf");
+  src: url("/fonts/ProximaNova/proximanova_extrabold.otf");
+}
+
+
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-inter: "Inter", inter;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("/fonts/ProximaNova-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 @layer utilities {
@@ -38,6 +70,15 @@
   --color-milk: #faeade;
   --font-sans: "Antonio", sans-serif;
   --font-paragraph: "ProximaNova, sans-serif";
+}
+
+@font-face {
+  font-family: "Dala Floda Web Roman No. 2 Regular";
+  src: url("https://db.onlinewebfonts.com/c/8a81f858a7ec3c9646258a3e9dfc2529?family=Dala+Floda+Web+Roman+No.+2+Regular") format("woff2");
+}
+
+.font-dalaFloda {
+  font-family: "Dala Floda Web Roman No. 2 Regular", Arial, sans-serif;
 }
 
 html,
