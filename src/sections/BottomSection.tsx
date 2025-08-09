@@ -43,8 +43,8 @@ export default function BottomSection() {
           },
         });
 
-        tl.to(panel, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power2.out" })
-          .to(panel, { autoAlpha: 0, y: -50, duration: 0.6, ease: "power2.in" }, "+=0.6");
+        tl.to(panel as Element, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power2.out" })
+          .to(panel as Element, { autoAlpha: 0, y: -50, duration: 0.6, ease: "power2.in" }, "+=0.6");
       });
 
       ScrollTrigger.create({
@@ -70,51 +70,6 @@ export default function BottomSection() {
         ))}
       </div>
 
-      <style jsx>{`
-        .section {
-          height: 100vh;
-          position: relative;
-          background: black;
-          overflow: hidden;
-        }
-
-        .content {
-          position: relative;
-          width: 100%;
-          height: 100%;
-        }
-
-        .panel {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          color: white;
-        }
-
-        .bg-image {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          opacity: 0.4;
-          z-index: 1;
-        }
-
-        .heading {
-          z-index: 2;
-          font-size: 4rem;
-          font-weight: bold;
-          text-align: center;
-        }
-      `}</style>
     </div>
   );
 }

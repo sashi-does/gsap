@@ -17,11 +17,8 @@ export default function WorkSection() {
         pin: true,
         scrub: 1,
         snap: 1 / (sections.length - 1),
-        start: "top 120px", // Start after the fixed header
-        end: () =>
-          "+=" + document.querySelector(".horizontal-container").offsetWidth,
-      },
-    });
+        start: "top 120px"
+    }});
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

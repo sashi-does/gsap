@@ -53,7 +53,6 @@ const BrandSection = () => {
     // Calculate the width of each row dynamically
     const leftRow = document.querySelector(".row-left");
     const rightRow = document.querySelector(".row-right");
-    const vw = window.innerWidth;
 
     if (leftRow && rightRow) {
       const leftWidth = leftRow.scrollWidth;

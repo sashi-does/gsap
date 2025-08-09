@@ -5,7 +5,6 @@ import { HeroSection } from './sections/HeroSection'
 import Section from './sections/Section'
 import SmoothScrollWrapper from './SmoothScrollWrapper'
 import BrandSection from './sections/BrandSection'
-import BottomSection from './sections/BottomSection'
 import WorkSection from './sections/workSection'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -20,7 +19,6 @@ export default function App() {
       <HeroSection videoRef={videoRef} />
       <Section />
       <BrandSection />
-      {/* <BottomSection /> */}
       <WorkSection />
     </SmoothScrollWrapper>
   )
