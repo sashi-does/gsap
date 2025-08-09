@@ -17,9 +17,9 @@ export default function App() {
   return (
     <SmoothScrollWrapper>
       
-      {/* <HeroSection videoRef={videoRef} /> */}
-      {/* <Section /> */}
-      {/* <BrandSection /> */}
+      <HeroSection videoRef={videoRef} />
+      <Section />
+      <BrandSection />
       {/* <BottomSection /> */}
       <WorkSection />
     </SmoothScrollWrapper>
